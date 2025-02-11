@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Plano</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <style>
+        .bg-gradient {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .font-mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+    </style>
+</head>
+<body class="bg-gradient min-h-screen">
+    <div class="p-4 md:p-8">
+        <!-- Header -->
+        <div class="max-w-5xl mx-auto mb-8 text-center">
+            <div class="flex justify-center mb-4">
+                <i data-feather="globe" class="h-12 w-12 text-blue-600"></i>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
+                Verificación de Plano
+            </h1>
+            <p class="text-slate-600">Sistema de Verificación Digital</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto space-y-6">
+            <!-- Verification Status -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-t-green-500 p-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="check-circle" class="h-8 w-8 text-green-500"></i>
+                        <div>
+                            <h2 class="text-xl font-semibold text-green-700">Documento Verificado</h2>
+                            <p class="text-sm text-slate-600">Verificación Digital</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-slate-600">Código de Verificación</p>
+                        <p class="font-mono text-sm">GEO-2025-001</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Information -->
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-feather="compass" class="h-5 w-5"></i>
+                    <h2 class="text-lg font-semibold">Información Técnica</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-medium text-slate-600 mb-1">Sistema de Referencia</h3>
+                            <p class="font-mono">DATUM: WGS 84</p>
+                            <p class="font-mono">ELIPSOIDE: GRS80</p>
+                            <p class="font-mono">PROYECCIÓN: UTM zone 18S</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium text-slate-600 mb-1">Punto de Control Base</h3>
+                            <p class="font-mono">E: 803622.449 m</p>
+                            <p class="font-mono">N: 8528844.263 m</p>
+                            <p class="font-mono">H: 2901.265 m (EGM2008)</p>
+                            <p class="font-mono">ORDEN: "C"</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-slate-600 mb-1">Equipamiento GNSS</h3>
+                        <p class="font-mono">RECEPTOR: EMLID RS3</p>
+                        <p class="font-mono">PRECISIÓN H: 7mm + 1ppm</p>
+                        <p class="font-mono">PRECISIÓN V: 14mm + 1ppm</p>
+                        <p class="font-mono text-xs">SEÑALES: GPS L1/L2, GLONASS L1/L2,</p>
+                        <p class="font-mono text-xs">GALILEO E1/E5b, BEIDOU B1/B2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location and Measurements -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Location -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="map-pin" class="h-5 w-5"></i>
+                        <h2 class="text-lg font-semibold">Ubicación</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Sector:</span>
+                            <span class="font-medium">PAUCARBAMBA</span>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Distrito:</span>
+                            <span class="font-medium">MARAS</span>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Provincia:</span>
+                            <span class="font-medium">URUBAMBA</span>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Departamento:</span>
+                            <span class="font-medium">CUSCO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Measurements -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="ruler" class="h-5 w-5"></i>
+                        <h2 class="text-lg font-semibold">Medidas</h2>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Área:</span>
+                            <span class="font-medium font-mono">904.76 m²</span>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Área (Ha):</span>
+                            <span class="font-medium font-mono">0.090476 Ha</span>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <span class="text-slate-600">Perímetro:</span>
+                            <span class="font-medium font-mono">237.20 m</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dates -->
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-feather="calendar" class="h-5 w-5"></i>
+                    <h2 class="text-lg font-semibold">Fechas</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="text-sm font-medium text-slate-600 mb-1">Levantamiento</h3>
+                        <p class="font-mono">09-02-2025</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-slate-600 mb-1">Procesamiento</h3>
+                        <p class="font-mono">11-02-2025</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-slate-600 mb-1">Verificación</h3>
+                        <p class="font-mono">11-02-2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-sm text-slate-600 mt-8">
+                <p>Este documento es verificable en:</p>
+                <a href="https://paucarbamba.github.io/perimetrico001" 
+                   class="text-blue-600 hover:text-blue-800 font-mono">
+                    paucarbamba.github.io/perimetrico001
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
